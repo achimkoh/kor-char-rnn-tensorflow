@@ -26,7 +26,7 @@ Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn)
 초기값인 발라드 가사 말뭉치로 훈련하려면 `python train.py`를 실행합니다. 다른 패러미터를 보려면 `python train.py --help`
 To train with default parameters on the lyricskor corpus, run `python train.py`. To access all the parameters use `python train.py --help`.
 
-체크포인트 저장된 모델에서 샘플을 추출하려면 `python sample.py`를 실행합니다 (현 저장소에는 없음).
+체크포인트 저장된 모델(현 저장소에는 없음, 훈련 후 생성)에서 샘플을 추출하려면 `python sample.py`를 실행합니다.
 To sample from a checkpointed model, `python sample.py`.
 
 ## Datasets
