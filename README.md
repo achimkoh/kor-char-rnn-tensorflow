@@ -7,7 +7,7 @@ multi-layer recurrent neural network for Korean (maybe applied to other asian la
 There are a lot of toy example RNN for English, but there are few when we find a example using Korean language. 
 
 
-한글 자연어처리에 있어서 딥러닝을 하는 경우 가장 먼저 해보게 되는게 글자단위의 RNN 모델일텐데, 이에 해당하는 자료가 별로 없어서 많은 사람들이 시작부터 어려움을 겪는 것 같습니다. 이 코드가 한글 자연어처리의 연구의 시작에 도움이 되었으면 합니다. 마음껏 수정하시고, 사용하시고 많이 배포하세요. (MIT Liscense)
+한글 자연어처리에 있어서 딥러닝을 하는 경우 가장 먼저 해보게 되는게 글자단위의 RNN 모델일텐데, 이에 해당하는 자료가 별로 없어서 많은 사람들이 시작부터 어려움을 겪는 것 같습니다. 이 코드가 한글 자연어처리의 연구의 시작에 도움이 되었으면 합니다. 마음껏 수정하시고, 사용하시고 많이 배포하세요. (MIT License)
 
 
 Thanks to 
@@ -23,8 +23,10 @@ Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn)
 - [Tensorflow 1.0](http://www.tensorflow.org)
 
 ## Basic Usage
-To train with default parameters on the tinyshakespeare corpus, run `python train.py`. To access all the parameters use `python train.py --help`.
+초기값인 발라드 가사 말뭉치로 훈련하려면 `python train.py`를 실행합니다. 다른 패러미터를 보려면 `python train.py --help`
+To train with default parameters on the lyricskor corpus, run `python train.py`. To access all the parameters use `python train.py --help`.
 
+체크포인트 저장된 모델에서 샘플을 추출하려면 `python sample.py`를 실행합니다 (현 저장소에는 없음).
 To sample from a checkpointed model, `python sample.py`.
 
 ## Datasets
@@ -74,6 +76,8 @@ To sample from a checkpointed model, `python sample.py`.
 3. 나무위키 본문:
 	데이터 자체가 위키 문법을 포함하고 있으므로 전처리를 거친 후에도 여전히 특이한 패턴들이 존재합니다. (항목을 나열하는 형태로 제작된 위키페이지 등) 학습을 위한 충분한 데이터가 있다고 판단되지만 (약 2GB) 각각의 주제와 서술 방식이 매우 다양하므로 이 모든것을 학습하려면 모델의 복잡도도 높아져야하고, 그 만큼 많은 데이터가 필요합니다. 이에 따라 필연적으로 훈련시간이 증가할 수 밖에 없습니다. 본 저자가 실험해본 결과 GTX 980 Ti (6GB VRAM) 에 fit 할 수 있는 최대 크기의 모델로 실험해도 10시간 동한 훈련해도 나아지지 않았습니다. 
 
+
+---
 
 You can use any plain text file as input. For example you could download [The complete Sherlock Holmes](https://sherlock-holm.es/ascii/) as such:
 
